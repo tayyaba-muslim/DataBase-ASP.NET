@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\asp\\Downloads\\Assignment1-Asp.net-main\\2301B2TempEmbedding\\2301B2TempEmbedding.csproj": {}
+    "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\2301B2TempEmbedding.csproj": {}
   },
   "projects": {
-    "C:\\Users\\asp\\Downloads\\Assignment1-Asp.net-main\\2301B2TempEmbedding\\2301B2TempEmbedding.csproj": {
+    "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\2301B2TempEmbedding.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asp\\Downloads\\Assignment1-Asp.net-main\\2301B2TempEmbedding\\2301B2TempEmbedding.csproj",
+        "projectUniqueName": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\2301B2TempEmbedding.csproj",
         "projectName": "2301B2TempEmbedding",
-        "projectPath": "C:\\Users\\asp\\Downloads\\Assignment1-Asp.net-main\\2301B2TempEmbedding\\2301B2TempEmbedding.csproj",
+        "projectPath": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\2301B2TempEmbedding.csproj",
         "packagesPath": "C:\\Users\\asp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asp\\Downloads\\Assignment1-Asp.net-main\\2301B2TempEmbedding\\obj\\",
+        "outputPath": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
