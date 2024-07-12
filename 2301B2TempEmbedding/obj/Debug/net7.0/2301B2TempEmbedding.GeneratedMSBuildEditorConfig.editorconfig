@@ -44,8 +44,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/asp/Documents/GitHub/DataBase-ASP.NET/2301B2TempEmbedding/Views/Items/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/asp/Documents/GitHub/DataBase-ASP.NET/2301B2TempEmbedding/Views/product/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJvZHVjdFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asp/Documents/GitHub/DataBase-ASP.NET/2301B2TempEmbedding/Views/product/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJvZHVjdFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asp/Documents/GitHub/DataBase-ASP.NET/2301B2TempEmbedding/Views/product/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccHJvZHVjdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/asp/Documents/GitHub/DataBase-ASP.NET/2301B2TempEmbedding/Views/product/Index.cshtml]

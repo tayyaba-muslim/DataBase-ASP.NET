@@ -1,15 +1,21 @@
 ﻿using _2301B2TempEmbedding.Models;
 
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace _2301B2TempEmbedding.Controllers
 {
-    public class productController : Controller
+    public class ItemsController : Controller
     {
-        EcommerceContext db = new EcommerceContext();
+        private readonly EcommerceContext db;
+        public ItemsController(EcommerceContext _db)
+        {
+            this.db = _db;
+        }
         public IActionResult Index()
         {
-            return View(db.Tables.ToList());
+            var Itemsdata = db.Items.Include(a => a.Cat);
+            return View(Itemsdata.ToList());
         }
         public IActionResult Create()
         {
@@ -17,11 +23,11 @@ namespace _2301B2TempEmbedding.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Table tab)
+        public IActionResult Create(Item item)
         {
             if (ModelState.IsValid)
             {
-                db.Tables.Add(tab);
+                db.Items.Add(item);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -30,16 +36,16 @@ namespace _2301B2TempEmbedding.Controllers
 
         public IActionResult Edit(int id)
         {
-            var table = db.Tables.Find(id);
-            return View(table);
+            var items = db.Items.Find(id);
+            return View(items);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Table tab)
+        public IActionResult Edit(Item item)
         {
             if (ModelState.IsValid)
             {
-                db.Tables.Update(tab);
+                db.Items.Update(item);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -47,23 +53,19 @@ namespace _2301B2TempEmbedding.Controllers
             {
                 return View();
             }
-            
         }
         public IActionResult Delete(int id)
         {
-            var table = db.Tables.Find(id);
-            return View(table);
+            var items = db.Items.Find(id);
+            return View(items);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Delete(Table tab)
+        public IActionResult Delete(Item item)
         {
-            
-                db.Tables.Remove(tab);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            
-
+            db.Items.Remove(item);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

@@ -453,6 +453,10 @@
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
     {
+      "Id": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\wwwroot\\css\\cherry.png",
+      "PackagePath": "staticwebassets\\css\\cherry.png"
+    },
+    {
       "Id": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bHOsIDJO1H40hYfmKUp+e9cygjh/JuJxO6wP4a60xDs=",
+  "Hash": "idvNhDQhzP/xeZfg0f3nKinsZBAX24IezkYvR8YTsCw=",
   "Source": "2301B2TempEmbedding",
   "BasePath": "_content/2301B2TempEmbedding",
   "Mode": "Default",
@@ -1953,6 +1953,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\wwwroot\\css\\cherry.png",
+      "SourceId": "2301B2TempEmbedding",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\wwwroot\\",
+      "BasePath": "_content/2301B2TempEmbedding",
+      "RelativePath": "css/cherry.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\cherry.png"
     },
     {
       "Identity": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\wwwroot\\css\\style.css",
