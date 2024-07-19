@@ -43,12 +43,15 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Image)
-            </td>
-            <td>
-                    <img class="rounded-circle" src="~/admin/img/cherry.png" alt="" style="width: 40px; height: 40px;">;
-            </td>
+                <td>
+
+                    <img src="@Html.DisplayFor(modelItem => item.Image)" alt="" class="rounded-circle" height="45" width="45">
+                    @*  <img src="~/img/product-1.jpg" alt="" class="rounded-circle" height="65"> *@
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cat.CatName)
+                </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |

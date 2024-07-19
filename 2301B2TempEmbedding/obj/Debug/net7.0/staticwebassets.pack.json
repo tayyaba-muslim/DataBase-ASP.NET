@@ -5,6 +5,38 @@
       "PackagePath": "staticwebassets\\2301B2TempEmbedding.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\wwwroot\\Uploads\\241719121719images.jpeg",
+      "PackagePath": "staticwebassets\\Uploads\\241719121719images.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\wwwroot\\Uploads\\242119122143product-2.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\242119122143product-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\wwwroot\\Uploads\\242119122153images.jpeg",
+      "PackagePath": "staticwebassets\\Uploads\\242119122153images.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\wwwroot\\Uploads\\243219123239blog-1.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\243219123239blog-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\wwwroot\\Uploads\\243319123353blog-1.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\243319123353blog-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\wwwroot\\Uploads\\243419123403blog-1.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\243419123403blog-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\wwwroot\\Uploads\\243519123509blog-1.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\243519123509blog-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\wwwroot\\Uploads\\244019124031product-7.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\244019124031product-7.jpg"
+    },
+    {
       "Id": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\wwwroot\\admin\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\admin\\css\\bootstrap.min.css"
     },
@@ -453,10 +485,6 @@
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\wwwroot\\css\\cherry.png",
-      "PackagePath": "staticwebassets\\css\\cherry.png"
-    },
-    {
       "Id": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
@@ -487,6 +515,10 @@
     {
       "Id": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\wwwroot\\img\\carousel-2.jpg",
       "PackagePath": "staticwebassets\\img\\carousel-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\wwwroot\\img\\cherry.png",
+      "PackagePath": "staticwebassets\\img\\cherry.png"
     },
     {
       "Id": "C:\\Users\\asp\\Documents\\GitHub\\DataBase-ASP.NET\\2301B2TempEmbedding\\wwwroot\\img\\icon-1.png",
