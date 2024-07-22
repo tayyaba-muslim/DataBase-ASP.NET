@@ -38,7 +38,7 @@ namespace _2301B2TempEmbedding.Controllers
 
 
 
-            }else if (email == "haris@gmail.com" && pass == "123")
+            }else if (email == "user@gmail.com" && pass == "123")
             {
 
                 HttpContext.Session.SetString("userEmail", email);
