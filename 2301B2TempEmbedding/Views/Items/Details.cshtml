@@ -29,14 +29,12 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Price)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Image)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Image)
+    
+        <dd class = "col-sm-12">
+            <img src="@Html.DisplayFor(model => model.Image)" alt="" class="rounded-circle" height="70">
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cat)
+            CatName
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Cat.CatId)

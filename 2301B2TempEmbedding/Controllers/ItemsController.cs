@@ -13,18 +13,22 @@ namespace _2301B2TempEmbedding.Controllers
         {
             this.db = _db;
         }
+        //index
         public IActionResult Index()
         {
             var Itemsdata = db.Items.Include(a => a.Cat);
             return View(Itemsdata.ToList());
         }
 
-        public IActionResult Details()
+        //Details
+        public IActionResult Details(int id)
         {
-            var Itemsdata = db.Items.Include(a => a.Cat);
-            return View(Itemsdata.ToList());
-        }
+            
+            var item2 = db.Items.Find(id);
 
+            return View(item2);
+        }
+        //Create
         public IActionResult Create()
         {
             ViewBag.CatId = new SelectList(db.Categories, "CatId", "CatName");
@@ -119,6 +123,7 @@ namespace _2301B2TempEmbedding.Controllers
         public IActionResult Delete(int id)
         {
             var items = db.Items.Find(id);
+            ViewBag.CatId = new SelectList(db.Categories, "CatId", "CatName");
             return View(items);
         }
         [HttpPost]
@@ -127,6 +132,7 @@ namespace _2301B2TempEmbedding.Controllers
         {
             db.Items.Remove(item);
             db.SaveChanges();
+            ViewBag.CatId = new SelectList(db.Categories, "CatId", "CatName");
             return RedirectToAction("Index");
         }
     }
