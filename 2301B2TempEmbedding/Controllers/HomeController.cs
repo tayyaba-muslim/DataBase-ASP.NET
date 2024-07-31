@@ -1,5 +1,6 @@
 ﻿using _2301B2TempEmbedding.Models;
 
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,27 +14,19 @@ namespace _2301B2TempEmbedding.Controllers
         {
             this.db = _db;
         }
-
+        [Authorize(Roles = "User")]
         public IActionResult Index()
         {
-            if (HttpContext.Session.GetString("role") == "user")
-            {
-                ViewBag.userEmail = HttpContext.Session.GetString("userEmail");
-                return View();
-            }
-            else
-            {
-                return RedirectToAction("Login", "Admin");
-            }
+           return View();
         }
-
+        [Authorize(Roles = "User")]
         public IActionResult Products()
         {
             var ItemsData = db.Items.Include(a => a.Cat);
 
             return View(ItemsData);
         }
-
+        [Authorize(Roles = "User")]
         public IActionResult Contact()
         {
             return View();

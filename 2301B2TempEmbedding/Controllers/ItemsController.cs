@@ -1,5 +1,6 @@
 ﻿using _2301B2TempEmbedding.Models;
 
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +15,7 @@ namespace _2301B2TempEmbedding.Controllers
             this.db = _db;
         }
         //index
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
             var Itemsdata = db.Items.Include(a => a.Cat);
@@ -21,6 +23,7 @@ namespace _2301B2TempEmbedding.Controllers
         }
 
         //Details
+        [Authorize(Roles = "Admin")]
         public IActionResult Details(int id)
         {
             
@@ -29,6 +32,7 @@ namespace _2301B2TempEmbedding.Controllers
             return View(item2);
         }
         //Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             ViewBag.CatId = new SelectList(db.Categories, "CatId", "CatName");
@@ -72,6 +76,7 @@ namespace _2301B2TempEmbedding.Controllers
         }
 
         //Edit
+        [Authorize(Roles = "Admin")]
         public IActionResult Edit(int id)
         {
             ViewBag.CatId = new SelectList(db.Categories, "CatId", "CatName");
@@ -120,6 +125,7 @@ namespace _2301B2TempEmbedding.Controllers
             ViewBag.CatId = new SelectList(db.Categories, "CatId", "CatName");
             return RedirectToAction("Index");
         }
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(int id)
         {
             var items = db.Items.Find(id);

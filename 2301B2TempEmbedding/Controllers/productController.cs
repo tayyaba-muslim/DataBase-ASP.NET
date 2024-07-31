@@ -1,16 +1,23 @@
 ﻿using _2301B2TempEmbedding.Models;
 
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace _2301B2TempEmbedding.Controllers
 {
     public class productController : Controller
     {
-        EcommerceContext db = new EcommerceContext();
+        private readonly EcommerceContext db;
+        public productController(EcommerceContext _db)
+        {
+            this.db = _db;
+        }
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
             return View(db.Tables.ToList());
         }
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
@@ -27,7 +34,7 @@ namespace _2301B2TempEmbedding.Controllers
             }
             return View();
         }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult Edit(int id)
         {
             var table = db.Tables.Find(id);
@@ -49,6 +56,7 @@ namespace _2301B2TempEmbedding.Controllers
             }
             
         }
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(int id)
         {
             var table = db.Tables.Find(id);
