@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using _2301B2TempEmbedding.Models;
 
 namespace _2301B2TempEmbedding.Models;
 
@@ -14,6 +15,8 @@ public partial class EcommerceContext : DbContext
         : base(options)
     {
     }
+
+    public virtual DbSet<Cart> Carts { get; set; }
 
     public virtual DbSet<Category> Categories { get; set; }
 
@@ -29,6 +32,21 @@ public partial class EcommerceContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Cart>(entity =>
+        {
+            entity.HasKey(e => e.CartId).HasName("PK__Cart__51BCD7B73020AA4A");
+
+            entity.ToTable("Cart");
+
+            entity.HasOne(d => d.Item).WithMany(p => p.Carts)
+                .HasForeignKey(d => d.ItemId)
+                .HasConstraintName("FK_Cart_Item");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Carts)
+                .HasForeignKey(d => d.UserId)
+                .HasConstraintName("FK_Cart_User");
+        });
+
         modelBuilder.Entity<Category>(entity =>
         {
             entity.HasKey(e => e.CatId).HasName("PK__Categori__6A1C8AFAB093F9B1");
@@ -86,4 +104,6 @@ public partial class EcommerceContext : DbContext
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+    public DbSet<_2301B2TempEmbedding.Models.Product> Product { get; set; } = default!;
 }

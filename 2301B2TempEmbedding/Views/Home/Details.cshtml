@@ -1,0 +1,52 @@
+﻿@model _2301B2TempEmbedding.Models.Item
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var userId = Context.Session.GetInt32("UserId");
+}
+<!-- Page Header Start -->
+<div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <h1 class="display-3 mb-3 animated slideInDown">Product Details</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a class="text-body" href="#">Home</a></li>
+
+                <li class="breadcrumb-item text-dark active" aria-current="page">Details</li>
+                <li class="breadcrumb-item text-dark active" aria-current="page">@Model.Name</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+<!-- About Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                    <img class="img-fluid w-100" src="@Html.DisplayFor(model=> model.Image)">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <h1 class="display-5 mb-4"> @Html.DisplayFor(model => model.Name)</h1>
+                <p class="mb-4"> @Html.DisplayFor(model => model.Description)</p>
+                <p><i class="fa fa-check text-primary me-3"></i> @Html.DisplayFor(model => model.Cat.CatName)</p>
+                <p><i class="fa fa-check text-primary me-3"></i>Rs.  @Html.DisplayFor(model => model.Price) Only</p>
+                <form asp-action="AddToCart">
+                    <Input type="hidden" name="UserId" value="@userId" />
+                    <Input type="hidden" name="ItemId" value="@Model.Id" />
+                    <Input type="hidden" name="price" value="@Model.Price" />
+                    <label for="qty">Enter Quantity in Kgs.</label>
+                    <Input type="number" class="" name="qty" required value="1" min="1" max="10" />
+                    <br>
+                    <button class="btn btn-primary rounded-pill py-3 px-5 mt-3 " type="submit">Add to cart</button>
+                </form>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

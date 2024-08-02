@@ -63,6 +63,7 @@ namespace _2301B2TempEmbedding.Controllers
                     identity = new ClaimsIdentity(new[]
                     {
                     new Claim(ClaimTypes.Name ,checkUser.Username),
+                    new Claim("SId" , user.Id.ToString()),
                     new Claim(ClaimTypes.Role ,"Admin"),
                 }
                    , CookieAuthenticationDefaults.AuthenticationScheme);
@@ -79,9 +80,11 @@ namespace _2301B2TempEmbedding.Controllers
                     identity = new ClaimsIdentity(new[]
                    {
                     new Claim(ClaimTypes.Name ,checkUser.Username),
+                    new Claim("SId" , user.Id.ToString()),
                     new Claim(ClaimTypes.Role ,"User"),
                 }
                    , CookieAuthenticationDefaults.AuthenticationScheme);
+                    HttpContext.Session.SetInt32("UserId", checkUser.Id);
                     controller = "Home";
                 }
                 else

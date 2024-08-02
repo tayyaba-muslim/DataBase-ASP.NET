@@ -16,4 +16,6 @@ public partial class User
     public int RoleId { get; set; }
 
     public int Status { get; set; }
+
+    public virtual ICollection<Cart> Carts { get; set; } = new List<Cart>();
 }

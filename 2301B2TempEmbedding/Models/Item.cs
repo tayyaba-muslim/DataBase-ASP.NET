@@ -17,5 +17,7 @@ public partial class Item
 
     public int? CatId { get; set; }
 
+    public virtual ICollection<Cart> Carts { get; set; } = new List<Cart>();
+
     public virtual Category? Cat { get; set; }
 }
