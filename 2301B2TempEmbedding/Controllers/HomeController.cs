@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace _2301B2TempEmbedding.Controllers
 {
-   
+
     public class HomeController : Controller
     {
         private readonly EcommerceContext db;
@@ -17,7 +17,7 @@ namespace _2301B2TempEmbedding.Controllers
         [Authorize(Roles = "User")]
         public IActionResult Index()
         {
-           return View();
+            return View();
         }
         [Authorize(Roles = "User")]
         public IActionResult Products()
@@ -37,7 +37,8 @@ namespace _2301B2TempEmbedding.Controllers
             var ItemDetail = ItemsData.FirstOrDefault(b => b.Id == id);
             if (ItemDetail != null)
             {
-
+                Cart cart = new Cart();
+                ViewBag.Cart = cart;
                 return View(ItemDetail);
             }
             else
@@ -45,21 +46,46 @@ namespace _2301B2TempEmbedding.Controllers
                 return RedirectToAction("Products");
             }
         }
-        public IActionResult AddToCart(string qty , string UserId , string ItemId , string price) 
+        [HttpPost]
+        public IActionResult AddToCart(Cart cart)
         {
+            var checkDuplicate = db.Carts.Where(X => X.ItemId == cart.ItemId).ToList();
 
-            var cartdata = new Cart
+            if (checkDuplicate.Any() && checkDuplicate != null)
             {
-                UserId = Convert.ToInt32(UserId),
-                ItemId = Convert.ToInt32(ItemId),
-                Price = Convert.ToInt32(price),
-                Qty = Convert.ToInt32(qty),
-                Total = Convert.ToInt32(qty) * Convert.ToInt32(price)
-            };
+                checkDuplicate[0].Qty += cart.Qty;
 
-            db.Carts.Add(cartdata);
+                checkDuplicate[0].Total += cart.Price * cart.Qty;
+                db.Carts.Update(checkDuplicate[0]);
+                db.SaveChanges();
+                return RedirectToAction("Products");
+            }
+            else
+            {
+                cart.Total = cart.Price * cart.Qty;
+                db.Carts.Add(cart);
+                db.SaveChanges();
+                return RedirectToAction("Products");
+            }
+
+            //var cartdata = new Cart
+            //{
+            //    UserId = Convert.ToInt32(UserId),
+            //    ItemId = Convert.ToInt32(ItemId),
+            //    Price = Convert.ToInt32(price),
+            //    Qty = Convert.ToInt32(qty),
+            //    Total = Convert.ToInt32(qty) * Convert.ToInt32(price)
+            //};
+            cart.Total = cart.Price * cart.Qty;
+
+            db.Carts.Add(cart);
             db.SaveChanges();
-            return RedirectToAction("Products");        
+            return RedirectToAction("Products");
+        }
+        public IActionResult Cart()
+        {
+            return View();
         }
     }
-}
+
+    }
